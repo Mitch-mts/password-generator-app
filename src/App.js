@@ -7,7 +7,7 @@ import { COPY_Fail, COPY_SUCCESS } from './message';
 
 const App = () => {
   const [password, setPassword] = useState("")
-  const [passwordLength, setPasswordLength] = useState(12)
+  const [passwordLength, setPasswordLength] = useState(10)
   const [includeUpperCase, setIncludeUpperCase] = useState(false)
   const [includeLowerCase, setIncludeLowerCase] = useState(false)
   const [includeNumbers, setIncludeNumbers] = useState(false)
@@ -34,8 +34,6 @@ const App = () => {
       setPassword(createPassword(characterList))
       notify("Password is generated successfully", false)
     }
-
-
   }
 
   const createPassword = (characterList) => {
